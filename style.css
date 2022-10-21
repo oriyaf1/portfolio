@@ -85,4 +85,27 @@ body {
     height: 100%;
     width: 100%;
     padding: 1rem;
+    position: relative;
+}
+#selfie-container{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    width: 30vw;
+    height: 40vh;
+    animation: float 70s 0s linear infinite forwards;
+}
+@keyframes float{
+    
+    0% { transform: rotate(0deg) translateX(3%) rotate(0deg); }
+    10% { transform: rotate(360deg) translateX(-2%) rotate(-360deg); }
+    20% { transform: rotate(0deg) translateX(3%) rotate(0deg); }
+    30% { transform: rotate(360deg) translateX(3%) rotate(-360deg); }
+    40% { transform: rotate(0deg) translateX(-3%) rotate(0deg); }
+    50%   { transform: rotate(360deg) translateX(-4%) rotate(-360deg)}
+    60%   { transform: rotate(0deg) translateX(2%) rotate(0deg)}
+    70%   { transform: rotate(360deg) translateX(4%) rotate(-360deg)}
+    80%   { transform: rotate(0deg) translateX(-3%) rotate(0deg)}
+    90%   { transform: rotate(360deg) translateX(-4%) rotate(-360deg)}
+    100% { transform: rotate(0deg) translateX(3%) rotate(0deg); }
 }
