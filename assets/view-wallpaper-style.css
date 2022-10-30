@@ -1,0 +1,55 @@
+
+svg{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    aspect-ratio: none;
+    transition: all 2s;
+}
+#smoke-area > :nth-child(odd){
+    animation: float 3s 0s linear infinite forwards;
+    transform-origin:0%;
+    transform-box:view-box;
+}
+#smoke-area > :nth-child(even){
+    animation: float 3s 1.5s linear infinite backwards;
+    /* transform-origin: center; */
+}
+@keyframes float{
+    
+    0% { transform:  translateY(50px); opacity: 0;}
+    30% { transform:  translateY(-100px); opacity: 1;}
+    
+    70% { transform:  translateY(-300px) ;opacity: 1; }
+    100% { transform:  translateY(-450px) ;opacity: 0; }
+}
+#airplane{
+    transform-origin: center;
+    transition: all 500ms;
+    animation: fly 10s 0s linear infinite both;
+}
+@keyframes fly{
+    
+    0% { transform: rotate(12deg) translateX(-11000px); opacity: 70%; }
+    /* 10% { transform: rotate(2deg) translateX(-1800px); opacity: 65%; }
+    20% { transform: rotate(-0deg) translateX(-1600px); opacity: 78%; }
+    30% { transform: rotate(-2deg) translateX(-1400px); opacity: 82%; } */
+    /* 30% { transform: rotate(3deg) translateX(-500px); opacity: 70%; } */
+    /* 70% { transform: rotate(2deg) translateX(00px); opacity: 60%; } */
+    /* 70% { transform: rotate(0deg) translateX(500px); opacity: 65%; } */
+    /* 70% { transform: rotate(-2deg) translateX(1400px); opacity: 78%; }
+    80% { transform: rotate(0deg) translateX(1600px); opacity: 82%; }
+    90% { transform: rotate(2deg) translateX(1800px); opacity: 70%; }     */
+    50% { transform: rotate(0deg) translateX(-0px) ; opacity: 100%; }
+    100% { transform: rotate(-12deg) translateX(11000px) ; opacity: 0%; }
+
+    /* 100% { transform: rotate(0deg) translateX(150px); } */
+}
+#window-shutter{
+    transition: all 2s;
+}
+#screen:hover{
+    z-index: 20;
+    cursor: pointer;
+    fill:red
+}
